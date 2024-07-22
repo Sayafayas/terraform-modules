@@ -1,0 +1,31 @@
+variable "aws_region" {
+  description = "The AWS region to create resources in"
+  default     = "eu-central-1"
+}
+
+variable "vpc_cidr" {
+  description = "The CIDR block for the VPC"
+  default     = ""
+}
+
+variable "public_subnet_cidrs" {
+  description = "The CIDR block for the public subnets"
+  default     = []
+}
+
+variable "private_subnet_cidrs" {
+  description = "The CIDR blocks for the private subnets"
+  default     = []
+}
+
+variable "enable_detailed_monitoring" {
+  type    = bool
+  default = false
+}
+
+variable "common_tags" {
+  description = "Common Tags to apply to all resources"
+  type        = map(any)
+  default = {
+  }
+}
