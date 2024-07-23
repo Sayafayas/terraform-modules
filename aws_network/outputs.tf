@@ -29,3 +29,7 @@ output "k8s_public_ip" {
 output "k8s_allocation_id" {
   value = aws_eip.k8s_ip.allocation_id
 }
+
+output "common_tags" {
+  value = var.common_tags
+}
