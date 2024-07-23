@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnets" {
   vpc_id                  = aws_vpc.worldofgames.id
   cidr_block              = element(var.public_subnet_cidrs, count.index)
   map_public_ip_on_launch = false
-  availability_zone       = data.aws_availability_zones.available.names[count.index]
+  availability_zone       = data.aws_availability_zones.available.names[count.index % length(data.aws_availability_zones.available.names)]
 
   tags = merge(var.common_tags, { Name = "${var.common_tags["Project"]} Public Subnet-${count.index + 1}" })
 }
