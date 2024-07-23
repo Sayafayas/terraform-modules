@@ -1,16 +1,19 @@
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC"
+  default     = ""
   type        = list(string)
 }
 
 variable "public_subnet_cidrs" {
   description = "The CIDR block for the public subnets"
   type        = list(string)
+  default     = []
 }
 
 variable "private_subnet_cidrs" {
   description = "The CIDR blocks for the private subnets"
   type        = list(string)
+  default     = []
 }
 
 variable "enable_detailed_monitoring" {
