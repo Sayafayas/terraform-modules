@@ -1,7 +1,7 @@
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC"
-  default     = []
-  type        = list(string)
+  default     = ""
+  type        = string
 }
 
 variable "public_subnet_cidrs" {
