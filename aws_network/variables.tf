@@ -18,6 +18,11 @@ variable "enable_detailed_monitoring" {
   default = false
 }
 
+variable "availability_zones" {
+  description = "A list of availability zones"
+  type        = list(string)
+}
+
 variable "common_tags" {
   description = "Common Tags to apply to all resources"
   type        = map(any)
