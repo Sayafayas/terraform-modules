@@ -1,7 +1,7 @@
 resource "aws_security_group" "runner_sg" {
   name        = "Runner Security Group"
   description = "Allow SSH from public_subnet"
-  vpc_id      = data.terraform_remote_state.network.outputs.vpc_id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22
