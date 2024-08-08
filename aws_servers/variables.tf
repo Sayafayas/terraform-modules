@@ -1,62 +1,82 @@
-variable "aws_region" {
-  description = "The AWS region to create resources in"
-  default     = "eu-central-1"
+variable "environment" {
+  description = "Environment name"
+  type        = string
 }
 
-variable "key_pair_name" {
-  description = "The name of the key pair to use for SSH access"
-  default     = ""
-}
-
-variable "db_instance_class" {
-  description = "The instance class for the RDS instance"
-  default     = "db.t4g.micro"
-}
-
-variable "db_engine" {
-  description = "The database engine for the RDS instance"
-  default     = "mysql"
-}
-
-variable "db_engine_version" {
-  description = "The version of the database engine"
-  default     = "8.0.37"
-}
-
-variable "db_username" {
-  description = "The username for the RDS instance"
-  default     = ""
-}
-
-variable "db_password" {
-  description = "The password for the RDS instance"
-  default     = ""
-}
-
-variable "db_allocated_storage" {
-  description = "The allocated storage for the RDS instance"
-  default     = 5
-}
-
-variable "instance_type" {
-  description = "The type of instance to use for the EC2 instance"
-  default     = "t2.micro"
-}
-
-variable "runner_instance_type" {
-  description = "The instance type for the GitHub Actions runner"
-  default     = "t3.medium"
-}
-
-
-variable "enable_detailed_monitoring" {
-  type    = bool
-  default = false
+variable "project" {
+  description = "Project name"
+  type        = string
 }
 
 variable "common_tags" {
-  description = "Common Tags to apply to all resources"
-  type        = map(any)
-  default = {
-  }
+  description = "Common tags to be applied to all resources"
+  type        = map(string)
 }
+
+variable "runner_instance_type" {
+  description = "Instance type for the runner instance"
+  type        = string
+}
+
+variable "public_subnet_cidrs" {
+  description = "CIDR blocks for public subnets"
+  type        = list(string)
+}
+
+variable "private_subnet_cidrs" {
+  description = "CIDR blocks for private subnets"
+  type        = list(string)
+}
+
+variable "k8s_public_ip" {
+  description = "Public IP address for the k8s instance"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "Instance type for the k8s node"
+  type        = string
+}
+
+variable "key_pair_name" {
+  description = "Key pair name for SSH access"
+  type        = string
+}
+
+variable "db_allocated_storage" {
+  description = "Allocated storage for the RDS instance"
+  type        = number
+}
+
+variable "db_engine" {
+  description = "Database engine for the RDS instance"
+  type        = string
+}
+
+variable "db_engine_version" {
+  description = "Engine version for the RDS instance"
+  type        = string
+}
+
+variable "db_instance_class" {
+  description = "Instance class for the RDS instance"
+  type        = string
+}
+
+variable "db_username" {
+  description = "Username for the RDS instance"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Password for the RDS instance"
+  type        = string
+  sensitive   = true
+}
+
+variable "user_data_base64" {
+  description = "Base64 encoded user data script"
+  type        = string
+  default     = ""
+}
+

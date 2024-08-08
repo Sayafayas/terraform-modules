@@ -1,34 +1,29 @@
 variable "vpc_cidr" {
-  description = "The CIDR block for the VPC"
-  default     = ""
+  description = "CIDR block for the VPC"
   type        = string
 }
 
 variable "public_subnet_cidrs" {
-  description = "The CIDR block for the public subnets"
+  description = "List of CIDR blocks for public subnets"
   type        = list(string)
-  default     = []
 }
 
 variable "private_subnet_cidrs" {
-  description = "The CIDR blocks for the private subnets"
+  description = "List of CIDR blocks for private subnets"
   type        = list(string)
-  default     = []
 }
 
-variable "enable_detailed_monitoring" {
-  type    = bool
-  default = false
+variable "environment" {
+  description = "Environment name"
+  type        = string
 }
 
-variable "availability_zones" {
-  description = "A list of availability zones"
-  type        = list(string)
+variable "project" {
+  description = "Project name"
+  type        = string
 }
 
 variable "common_tags" {
-  description = "Common Tags to apply to all resources"
-  type        = map(any)
-  default = {
-  }
+  description = "Common tags to be applied to all resources"
+  type        = map(string)
 }
