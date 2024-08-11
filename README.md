@@ -65,10 +65,11 @@ This module sets up a VPN to securely access the private resources in the VPC.
 3. Initialize the Terragrunt environment:
 ```sh
 terragrunt init
+```
 4. Apply the infrastructure changes:
 ```sh
 terragrunt apply-all
-
+```
 ### Outputs
 After deployment, the output values will be printed to the console. These values include VPC IDs, subnet IDs, security group IDs, and public/private IPs of the EC2 instances.
 
