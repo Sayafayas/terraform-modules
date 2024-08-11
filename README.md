@@ -63,8 +63,10 @@ This module sets up a VPN to securely access the private resources in the VPC.
 2. Navigate to the desired environment directory (e.g., dev, staging, prod).
 
 3. Initialize the Terragrunt environment:
+```sh
 terragrunt init
 4. Apply the infrastructure changes:
+```sh
 terragrunt apply-all
 
 ### Outputs
