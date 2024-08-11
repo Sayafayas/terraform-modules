@@ -13,6 +13,21 @@ variable "private_subnet_cidrs" {
   type        = list(string)
 }
 
+variable "server_certificate_arn" {
+  description = "ARN of the server certificate for the Client VPN endpoint"
+  type        = string
+}
+
+variable "client_certificate_arn" {
+  description = "ARN of the client certificate for the Client VPN endpoint"
+  type        = string
+}
+
+variable "client_cidr_block" {
+  description = "The CIDR block to be used by the Client VPN endpoint"
+  type        = string
+}
+
 variable "environment" {
   description = "Environment name"
   type        = string

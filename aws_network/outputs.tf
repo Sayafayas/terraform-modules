@@ -26,6 +26,14 @@ output "nat_gateway_ips" {
   value = aws_eip.nat_gateway_ip[*].public_ip
 }
 
-output "k8s_ip" {
-  value = aws_eip.k8s_ip.public_ip
+output "client_vpn_endpoint_id" {
+  value = aws_client_vpn_endpoint.main.id
+}
+
+output "client_vpn_network_association_id" {
+  value = aws_client_vpn_network_association.main.id
+}
+
+output "client_vpn_authorization_rule_id" {
+  value = aws_client_vpn_authorization_rule.main.id
 }
