@@ -55,21 +55,6 @@ This module sets up a VPN to securely access the private resources in the VPC.
 - Ensure you have [Terraform](https://www.terraform.io/downloads.html) and [Terragrunt](https://terragrunt.gruntwork.io/) installed.
 - AWS credentials configured for your environment.
 
-### Deployment Steps
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-org/wog-infrastructure-modules.git
-   cd wog-infrastructure-modules
-2. Navigate to the desired environment directory (e.g., dev, staging, prod).
-
-3. Initialize the Terragrunt environment:
-```sh
-terragrunt init
-```
-4. Apply the infrastructure changes:
-```sh
-terragrunt apply-all
-```
 ### Outputs
 After deployment, the output values will be printed to the console. These values include VPC IDs, subnet IDs, security group IDs, and public/private IPs of the EC2 instances.
 
