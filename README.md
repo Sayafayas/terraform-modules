@@ -2,6 +2,19 @@
 
 This repository contains Terraform modules for setting up the infrastructure of the World of Games (WoG) project. The infrastructure is designed to be deployed on AWS, providing reusable and scalable components for building and managing your environment. The modules are organized into the following components:
 
+## Table of Contents
+1. [Modules Overview](#modules-overview)
+   - [Network Module](#1-network-module)
+   - [Security Module](#2-security-module)
+   - [Servers Module](#3-servers-module)
+   - [VPN Module (Optional)](#4-vpn-module-optional)
+2. [Usage](#usage)
+   - [Outputs](#outputs)
+3. [Getting Started](#getting-started)
+4. [Prerequisites](#prerequisites)
+5. [Contributing](#contributing)
+6. [License](#license)
+
 ## Modules Overview
 
 ### 1. Network Module
