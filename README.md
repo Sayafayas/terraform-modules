@@ -1,6 +1,6 @@
 # DevOps Infrastructure Modules
 
-This repository contains Terraform modules for setting up the infrastructure of the World of Games (WoG) project. The infrastructure is designed to be deployed on AWS using Terragrunt to manage dependencies and environments. The modules are organized into the following components:
+This repository contains Terraform modules for setting up the infrastructure of the World of Games (WoG) project. The infrastructure is designed to be deployed on AWS, providing reusable and scalable components for building and managing your environment. The modules are organized into the following components:
 
 ## Modules Overview
 
@@ -50,14 +50,25 @@ This module sets up a VPN to securely access the private resources in the VPC.
 - Certificate ARNs
 
 ## Usage
-
-### Prerequisites
-- Ensure you have [Terraform](https://www.terraform.io/downloads.html) and [Terragrunt](https://terragrunt.gruntwork.io/) installed.
-- AWS credentials configured for your environment.
+Each module is self-contained and can be integrated into larger infrastructure configurations.
 
 ### Outputs
 After deployment, the output values will be printed to the console. These values include VPC IDs, subnet IDs, security group IDs, and public/private IPs of the EC2 instances.
 
-### Contributing
+## Getting Started
+1. Clone the repository.
+2. Configure the necessary variables for your environment.
+3. Use Terraform to plan and then deploy each module:
+   ```bash
+   terraform plan
+   terraform apply
+    ```
+## Prerequisites
+- Terraform >= 0.13
+- AWS account with proper IAM permissions
 
-Feel free to open issues or submit pull requests to improve this repository.
+### Contributing
+Feel free to contribute by submitting issues or pull requests.
+
+### License
+This project is licensed under the MIT License.
