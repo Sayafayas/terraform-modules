@@ -1,6 +1,6 @@
 # DevOps Infrastructure Modules
 
-This repository contains Terraform modules for setting up the infrastructure of the World of Games (WoG) project. The infrastructure is designed to be deployed on AWS, providing reusable and scalable components for building and managing your environment. The modules are organized into the following components:
+This repository contains Terraform modules for setting up the infrastructure in AWS. The infrastructure is designed to be deployed on AWS, providing reusable and scalable components for building and managing your environment. The modules are organized into the following components:
 
 ## Table of Contents
 1. [Modules Overview](#modules-overview)
