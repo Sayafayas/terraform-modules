@@ -13,7 +13,6 @@ This repository contains Terraform modules for setting up the infrastructure in 
 3. [Getting Started](#getting-started)
 4. [Prerequisites](#prerequisites)
 5. [Contributing](#contributing)
-6. [License](#license)
 
 ## Modules Overview
 
@@ -83,5 +82,3 @@ After deployment, the output values will be printed to the console. These values
 ### Contributing
 Feel free to contribute by submitting issues or pull requests.
 
-### License
-This project is licensed under the MIT License.
